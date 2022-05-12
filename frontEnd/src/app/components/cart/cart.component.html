@@ -1,0 +1,9 @@
+<ng-container *ngIf="{total: total$ | async, quantity: quantity$ | async } as dataCart ">
+    <ng-container  *ngIf="dataCart.total" >
+        <button mat-button (click)="openDialog()"> 
+            <mat-icon>add_shopping_cart</mat-icon>
+            {{dataCart.total | currency}}
+            ({{dataCart.quantity}})
+        </button>
+    </ng-container>
+</ng-container>

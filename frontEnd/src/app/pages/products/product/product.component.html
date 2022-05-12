@@ -1,0 +1,15 @@
+<div *ngIf="product.categoryId == categoria">
+    <mat-card class="card ">
+        <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="contImg" style="height: 600px;"><img [src]="product.image" style="margin:auto" alig></mat-card-content>
+        <mat-card-actions>
+            <a mat-flat-button  [routerLink]="['/details']" (click)="onClickDetails()" >Ver Detalle</a>
+            <button mat-flat-button color="primary" (click)="onclick()">Buy {{product.price | currency}}
+                 <mat-icon>add_shopping_cart</mat-icon></button>
+                 
+        </mat-card-actions>
+        
+    </mat-card>
+</div>
